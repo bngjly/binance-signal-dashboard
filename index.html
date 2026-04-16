@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binance Signal Dashboard</title>
+<style>
+  :root {
+    --bg: #0d1117; --bg2: #161b22; --bg3: #21262d;
+    --border: #30363d; --text: #e6edf3; --muted: #8b949e;
+    --blue: #58a6ff; --green: #3fb950;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .container { text-align: center; padding: 40px 24px; max-width: 500px; }
+  .logo { font-size: 48px; margin-bottom: 16px; }
+  h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .subtitle { color: var(--muted); font-size: 13px; margin-bottom: 40px; line-height: 1.6; }
+  .cards { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .card {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 32px;
+    text-decoration: none; color: var(--text);
+    transition: all .2s; flex: 1; min-width: 200px;
+  }
+  .card:hover { border-color: var(--blue); transform: translateY(-2px); background: var(--bg3); }
+  .card-icon { font-size: 32px; margin-bottom: 12px; }
+  .card-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; color: var(--blue); }
+  .card-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .badge {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    padding: 2px 8px; border-radius: 10px; margin-top: 10px;
+  }
+  .badge-new { background: rgba(63,185,80,.15); color: var(--green); }
+  .badge-stable { background: rgba(88,166,255,.15); color: var(--blue); }
+  .footer { margin-top: 40px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">📊</div>
+  <h1>Binance Futures Signal Dashboard</h1>
+  <div class="subtitle">Real-time 7-dim signal scoring · Binance Futures API · Multi-timeframe</div>
+  <div class="cards">
+    <a class="card" href="/signal_dashboard.html">
+      <div class="card-icon">🚀</div>
+      <div class="card-title">v2 Multi-Timeframe</div>
+      <div class="card-desc">15m / 1h / 4h switching<br>TF labels &amp; batch analysis</div>
+      <div class="badge badge-new">Latest</div>
+    </a>
+    <a class="card" href="/signal_dashboard_v1.html">
+      <div class="card-icon">📈</div>
+      <div class="card-title">v1 Standard</div>
+      <div class="card-desc">Fixed 1h timeframe<br>Stable baseline</div>
+      <div class="badge badge-stable">Stable</div>
+    </a>
+  </div>
+  <div class="footer">Data: Binance Futures API · For reference only, not investment advice</div>
+</div>
+</body>
+</html>
